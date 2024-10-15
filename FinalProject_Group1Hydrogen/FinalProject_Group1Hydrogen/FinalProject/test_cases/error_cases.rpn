@@ -1,0 +1,29 @@
+# Error cases tested here.
+
+# Integration test that runs this script will have to search
+# the output to find the expected error messages.
+
+# This should generate a "Stack empty!" message.
+pop
+
+# Test other error situations here.
+....
+a + 1
+a = 1
+a = a
+x = 1
+y = 1
+e = 1
+π = 1
+pi = 1
+z
+z = 123412341290341313248103274982137490128374091823749081273904128734098237490182374932174
+1
+0
+div
+0
+0
+div
+clear
+0.0
+exit

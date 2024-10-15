@@ -1,0 +1,25 @@
+# Golden Ratio = (1 + sqrt(5)) / 2
+
+# Do your calculation
+5
+2
+root
+1
+add
+2
+div
+
+
+# This is the expected result
+1.6180339887
+
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+
+# Should be zero or very small here
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.
