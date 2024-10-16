@@ -210,19 +210,61 @@ class BigDecimalUtils {
         return BigDecimal.ZERO; // STUB ONLY
     }
 
+    /**
+     * Computes the sine of a given angle in radians.
+     * 
+     * @param x The angle in radians as a BigDecimal.
+     * @param mc The MathContext for precision control
+     * @return The sine of the given angle as a BigDecimal
+     * @author Yordanos Shiferaw
+     */
     static final BigDecimal sin(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert BigDecimal to double
+        double xDouble = x.doubleValue();
+        
+        //Compute cosine using Math.exp
+        double result = Math.sin(xDouble);
+        
+        //Convert result back to BigDecimal with specified precision
+        return new BigDecimal(result, mc);
+        
     }
-
+    
+    /**
+     * Computes the tangent of a given angle in radians.
+     * 
+     * @param x The angle in radians as a BigDecimal.
+     * @param mc The MathContext for precision control
+     * @return The tangent of the given angle as a BigDecimal
+     * @author Yordanos Shiferaw
+     */
     static final BigDecimal tan(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert BigDecimal to double
+        double xDouble = x.doubleValue();
+        //Compute cosine using Math.exp
+        double result = Math.tan(xDouble); 
+        //Convert result back to BigDecimal with specified precision
+        return new BigDecimal(result, mc);
     }
-
+    
+    /**
+     * Computes the arcsine of a given angle in radians.
+     * 
+     * @param x The angle in radians as a BigDecimal.
+     * @param mc The MathContext for precision control
+     * @return The arcsine of the given angle as a BigDecimal
+     * @author Yordanos Shiferaw
+     */
     static final BigDecimal asin(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert BigDecimal to double
+        double xDouble = x.doubleValue();  
+        //Compute cosine using Math.exp
+        double result = Math.asin(xDouble);
+        //Convert result back to BigDecimal with specified precision
+        return new BigDecimal(result, mc);
     }
 
     static final BigDecimal acos(BigDecimal x, MathContext mc)
@@ -230,9 +272,22 @@ class BigDecimalUtils {
         return BigDecimal.ZERO; // STUB ONLY
     }
 
+    /**
+     * Computes the arctangent of a given angle in radians.
+     * 
+     * @param x The angle in radians as a BigDecimal.
+     * @param mc The MathContext for precision control
+     * @return The arctangent of the given angle as a BigDecimal
+     * @author Yordanos Shiferaw
+     */
     static final BigDecimal atan(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert BigDecimal to double
+        double xDouble = x.doubleValue();
+        //Compute cosine using Math.exp
+        double result = Math.atan(xDouble);
+        //Convert result back to BigDecimal with specified precision
+        return new BigDecimal(result, mc);
     }
 
     static final BigDecimal atan2(BigDecimal y, BigDecimal x, MathContext mc)
