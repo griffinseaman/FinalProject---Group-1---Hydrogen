@@ -1,86 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.BigDecimalUtilsTest" time="0.185" tests="27" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.BigDecimalUtilsTest" time="0.356" tests="73" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="22"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Griff\OneDrive\Documents\NetBeansProjects\CS4510\FinalProject_Group1Hydrogen\FinalProject_Group1Hydrogen\FinalProject\target\test-classes;C:\Users\Griff\OneDrive\Documents\NetBeansProjects\CS4510\FinalProject_Group1Hydrogen\FinalProject_Group1Hydrogen\FinalProject\target\classes;C:\Users\Griff\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\Griff\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\Griff\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Griff\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Griff\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\Griff\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\Griff\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\Griff\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\Griff\.m2\repository\net\jqwik\jqwik-api\1.9.0\jqwik-api-1.9.0.jar;C:\Users\Griff\.m2\repository\net\jqwik\jqwik-engine\1.9.0\jqwik-engine-1.9.0.jar;C:\Users\Griff\.m2\repository\org\mockito\mockito-core\5.13.0\mockito-core-5.13.0.jar;C:\Users\Griff\.m2\repository\net\bytebuddy\byte-buddy\1.15.0\byte-buddy-1.15.0.jar;C:\Users\Griff\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.0\byte-buddy-agent-1.15.0.jar;C:\Users\Griff\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Griff\.m2\repository\org\mockito\mockito-junit-jupiter\5.13.0\mockito-junit-jupiter-5.13.0.jar;"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="user.timezone" value="America/Chicago"/>
-    <property name="os.name" value="Windows 11"/>
-    <property name="java.vm.specification.version" value="22"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\Griff\AppData\Local\Temp\surefire14146083674639442021\surefirebooter-20241015121846670_3.jar C:\Users\Griff\AppData\Local\Temp\surefire14146083674639442021 2024-10-15T12-18-46_518-jvmRun1 surefire-20241015121846670_1tmp surefire_0-20241015121846670_2tmp"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-amazon-corretto/lib"/>
+    <property name="sun.java.command" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016020442779_3.jar /home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire 2024-10-16T02-04-42_648-jvmRun1 surefire-20241016020442779_1tmp surefire_0-20241016020442779_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Griff\OneDrive\Documents\NetBeansProjects\CS4510\FinalProject_Group1Hydrogen\FinalProject_Group1Hydrogen\FinalProject\target\test-classes;C:\Users\Griff\OneDrive\Documents\NetBeansProjects\CS4510\FinalProject_Group1Hydrogen\FinalProject_Group1Hydrogen\FinalProject\target\classes;C:\Users\Griff\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\Griff\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\Griff\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Griff\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Griff\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\Griff\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\Griff\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\Griff\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\Griff\.m2\repository\net\jqwik\jqwik-api\1.9.0\jqwik-api-1.9.0.jar;C:\Users\Griff\.m2\repository\net\jqwik\jqwik-engine\1.9.0\jqwik-engine-1.9.0.jar;C:\Users\Griff\.m2\repository\org\mockito\mockito-core\5.13.0\mockito-core-5.13.0.jar;C:\Users\Griff\.m2\repository\net\bytebuddy\byte-buddy\1.15.0\byte-buddy-1.15.0.jar;C:\Users\Griff\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.0\byte-buddy-agent-1.15.0.jar;C:\Users\Griff\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Griff\.m2\repository\org\mockito\mockito-junit-jupiter\5.13.0\mockito-junit-jupiter-5.13.0.jar;"/>
+    <property name="surefire.test.class.path" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\Griff"/>
+    <property name="user.home" value="/home/noah"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2024-07-16"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-22"/>
-    <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Griff\OneDrive\Documents\NetBeansProjects\CS4510\FinalProject_Group1Hydrogen\FinalProject_Group1Hydrogen\FinalProject"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-amazon-corretto"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Griff\AppData\Local\Temp\surefire14146083674639442021\surefirebooter-20241015121846670_3.jar"/>
-    <property name="user.script" value=""/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016020442779_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="22.0.2+9-70"/>
-    <property name="user.name" value="Griff"/>
-    <property name="stdout.encoding" value="Cp1252"/>
-    <property name="path.separator" value=";"/>
-    <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.runtime.version" value="11.0.24+8-LTS"/>
+    <property name="user.name" value="noah"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-45-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-22\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="localRepository" value="C:\Users\Griff\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\Griff\AppData\Local\Temp\"/>
-    <property name="java.version" value="22.0.2"/>
-    <property name="user.dir" value="C:\Users\Griff\OneDrive\Documents\NetBeansProjects\CS4510\FinalProject_Group1Hydrogen\FinalProject_Group1Hydrogen\FinalProject"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="skipTests" value="false"/>
+    <property name="java.vendor.version" value="Corretto-11.0.24.8.1"/>
+    <property name="maven.ext.class.path" value="/usr/lib/apache-netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="localRepository" value="/home/noah/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.24"/>
+    <property name="user.dir" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="sun.os.patch.level" value=""/>
-    <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;D:\Program Files\Amazon Corretto\jdk11.0.21_9\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Griff\AppData\Local\Microsoft\WindowsApps;;D:\Games\Microsoft VS Code\bin;C:\Users\Griff\.dotnet\tools;."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="stderr.encoding" value="Cp1252"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="22.0.2+9-70"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="11.0.24+8-LTS"/>
+    <property name="java.specification.maintenance.version" value="2"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="66.0"/>
+    <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testExpZero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.022"/>
-  <testcase name="testExpLargePositive" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003"/>
-  <testcase name="testFloor(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.031"/>
+  <testcase name="testExpZero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.032"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.024"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpLargePositive" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testFloor(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.013"/>
   <testcase name="testFloor(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testFloor(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testFloor(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testFloor(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testRecip" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testRound(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testRound(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testRound(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testRound(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testRound(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTrunc(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTrunc(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testTrunc(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testTrunc(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTrunc(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExpLargeNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCeil(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCeil(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpLargeNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testCeil(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testCeil(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testCeil(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCeil(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testCeil(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testExpVariousInputs(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.013"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpVariousInputs(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>

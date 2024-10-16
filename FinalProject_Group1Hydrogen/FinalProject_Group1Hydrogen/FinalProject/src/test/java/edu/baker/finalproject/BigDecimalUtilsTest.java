@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.math.RoundingMode;
 
 
 
@@ -138,5 +139,132 @@ class BigDecimalUtilsTest {
         MathContext highPrecision = new MathContext(50);
         BigDecimal result = BigDecimalUtils.exp(BigDecimal.ONE, highPrecision);
         assertEquals(50, result.precision(), "Result should have the precision specified by MathContext");
+    }
+
+    /**
+     * Parameterized test for ipow(BigDecimal base, BigDecimal power, MathContext mc).
+     * 
+     * @param base The base
+     * @param power The exponent
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "2, 3, 8", // Normal case: 2^3 = 8
+        "5, 0, 1", // Edge case: any number to the power of 0 is 1
+        "0, 3, 0", // Edge case: 0^n = 0 for n > 0
+        "10, -1, 0.100000000", // Negative power: 10^-1 = 0.1
+        "-2, 3, -8", // Odd power with negative base: (-2)^3 = -8
+        "-2, 2, 4",// Even power with negative base: (-2)^2 = 4
+        "2, -2, 0.25", // Negative power: 2^-2 = 0.25
+        "0, 0, 1", // Edge case: 0^0 is commonly defined as 1
+        "27, 0.333333333, 1",// Fractional power: cube root of 27 is 3 BUT 
+        // there are no fractions in integer power, should round to 27^0 = 1
+        "1.000001, 1000000, 2.71828047"  // Very large powers
+    })
+    public void testIpowDecimal(BigDecimal base, BigDecimal power, BigDecimal expected){
+        MathContext mc = new MathContext(9, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.ipow(base, power, mc));
+    }
+    
+    /**
+     * Parameterized test for ipow(BigDecimal base, long ipower, MathContext mc).
+     *  
+     * @param base The base
+     * @param power The exponent
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "2, 3, 8", // Normal case
+        "5, 0, 1", // Any number to the power of 0
+        "0, 3, 0", // 0^n = 0 for n > 0
+        "-2, 2, 4",// Even power with negative base
+        "-2, 3, -8", // Odd power with negative base
+        "10, -1, 0.100000000",// Negative power
+        "0, 0, 1", // 0^0 is defined as 1
+        "1.000001, 1000000, 2.71828047"  // Very large powers
+    })
+    public void testIpowLong(BigDecimal base, long ipower, BigDecimal expected) {
+        MathContext mc = new MathContext(9, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.ipow(base, ipower, mc));
+    }
+        
+    /**
+     * Parameterized test for iroot(BigDecimal base, BigDecimal root, MathContext mc).
+     *  
+     * @param base The base
+     * @param root The root
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "8, 3, 2", // Cube root of 8
+        "9, 2, 3", // Square root of 9
+        "27, 3, 3",// Cube root of 27
+        "16, 4, 2",// Fourth root of 16
+        "7, 1, 7", // 1th root of n is always n
+        "1, 5, 1", // nth root of 1 is always 1
+        "0, 3, 0", // nth root of 0 is 0
+        "-8, 3, -2", // Cube root of negative number (-8) is -2
+        "8, 0, 1", // Base with root = 0, assumed 1 as a rule
+        "0.01, 2, 0.10" // Small fractional roots: sqrt(0.01) = 0.1
+    })
+    public void testIrootDecimal(BigDecimal base, BigDecimal root, BigDecimal expected) {
+        MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.iroot(base, root, mc));
+    }
+    
+    /**
+     * Parameterized test for iroot(BigDecimal base, long iroot, MathContext mc).
+     *  
+     * @param base The base
+     * @param root The root
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "8, 3, 2", // Cube root of 8
+        "9, 2, 3", // Square root of 9
+        "27, 3, 3",// Cube root of 27
+        "16, 4, 2",// Fourth root of 16
+        "7, 1, 7", // 1th root of n is always n
+        "1, 5, 1", // nth root of 1 is always 1
+        "0, 3, 0", // nth root of 0 is 0
+        "-8, 3, -2", // Cube root of negative number (-8) is -2
+        "8, 0, 1", // Base with root = 0, assumed 1 as a rule
+        "0.01, 2, 0.10" // Small fractional roots: sqrt(0.01) = 0.1
+    })
+    public void testIrootLong(BigDecimal base, long iroot, BigDecimal expected) {
+        MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.iroot(base, iroot, mc));
+    }
+    
+    /**
+     * Parameterized test for pow(BigDecimal base, BigDecimal power, MathContext mc).
+     *  
+     * @param base The base
+     * @param power The exponent
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "2, 3, 8", // Normal case: 2^3 = 8
+        "5, 0, 1", // Any number to the power of 0
+        "0, 5, 0", // 0^5 = 0
+        "7, -1, 0.142857", // Negative powers
+        "3, 0.5, 1.73205", // Fractional power: sqrt(3)
+        "-2, 2, 4", // Even power with negative base
+        "-2, 3, -8", // Odd power with negative base
+        "-2, -2, 0.25", // Negative even power with negative base
+    })
+    public void testPow(BigDecimal base, BigDecimal power, BigDecimal expected) {
+        MathContext mc = new MathContext(6, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.pow(base, power, mc));
     }
 }
