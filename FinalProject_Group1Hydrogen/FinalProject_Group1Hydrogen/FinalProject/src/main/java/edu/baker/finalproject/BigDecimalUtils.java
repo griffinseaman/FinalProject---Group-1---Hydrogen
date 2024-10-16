@@ -10,7 +10,7 @@ import java.math.RoundingMode;
 
 /**
  *
- * @author Noah Wood
+ * @author Noah Wood, ???
  */
 class BigDecimalUtils {
     static final BigDecimal recip(BigDecimal x, MathContext mc) 
@@ -72,29 +72,102 @@ class BigDecimalUtils {
         return new BigDecimal(result, mc);
     }
 
-    static final BigDecimal ipow(BigDecimal base, BigDecimal power, MathContext mc)
+    /**
+     * Computes nth power using BigDecimal arithmetic.
+     * 
+     * @param base The base
+     * @param power The exponent
+     * @param mc The MathContext for precision control
+     * @return base^power as a BigDecimal
+     * @author Noah Wood
+     */
+     static final BigDecimal ipow(BigDecimal base, BigDecimal power, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        return new BigDecimal(Math.pow(base.doubleValue(), power.round(mc).intValue()), mc);
     }
 
+
+    /**
+     * Computes nth power using BigDecimal arithmetic.
+     * 
+     * @param base The base
+     * @param ipower The exponent
+     * @param mc The MathContext for precision control
+     * @return base^power as a BigDecimal
+     * @author Noah Wood
+     */
     static final BigDecimal ipow(BigDecimal base, long ipower, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        return new BigDecimal(Math.pow(base.doubleValue(), (int)ipower), mc);
     }
 
+
+    /**
+     * Computes nth (integer) root using BigDecimal arithmetic.
+     * 
+     * @param base The base
+     * @param power The root
+     * @param mc The MathContext for precision control
+     * @return base^(1/root) as a BigDecimal
+     * @author Noah Wood
+     */
     static final BigDecimal iroot(BigDecimal base, BigDecimal root, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        if(root.equals(BigDecimal.ONE))
+            return base;
+        if(root.equals(BigDecimal.ZERO))
+            return BigDecimal.ONE;
+        Double x = base.abs().doubleValue();
+        Double y = 1 / (double)root.round(mc).intValue();
+        // Handle negative values
+        BigDecimal out = new BigDecimal(Math.pow(x,y),mc);
+        if(base.signum() < 0){
+            if(y%2!=0){
+                out = out.negate(mc);
+            }
+        }
+        return out;
     }
 
+    /**
+     * Computes nth (integer) root using BigDecimal arithmetic.
+     * 
+     * @param base The base
+     * @param power The root
+     * @param mc The MathContext for precision control
+     * @return base^(1/root) as a BigDecimal
+     * @author Noah Wood
+     */
     static final BigDecimal iroot(BigDecimal base, long iroot, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        if(iroot == 1)
+            return base;
+        if(iroot == 0)
+            return BigDecimal.ONE;
+        Double x = base.abs().doubleValue();
+        Double y = 1 / (double)iroot;
+        // Handle negative values
+        BigDecimal out = new BigDecimal(Math.pow(x,y),mc);
+        if(base.signum() < 0){
+            if(y%2!=0){
+                out = out.negate(mc);
+            }
+        }
+        return out;
     }
 
+    /**
+     * Computes nth power using BigDecimal arithmetic.
+     * 
+     * @param base The base
+     * @param power The exponent
+     * @param mc The MathContext for precision control
+     * @return base^power as a BigDecimal
+     * @author Noah Wood
+     */
     static final BigDecimal pow(BigDecimal base, BigDecimal power, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        return new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()), mc);
     }
 
     /**
@@ -103,7 +176,7 @@ class BigDecimalUtils {
      * @param x The exponent
      * @param mc The MathContext for precision control
      * @return e^x as a BigDecimal
-     * @author Noah Wood
+     * @author Noah Wood // Uh.... I don't actually remember doing this?
      */
     static final BigDecimal exp(BigDecimal x, MathContext mc)
     {

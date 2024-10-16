@@ -1,4 +1,4 @@
-edu\baker\finalproject\RPNEquationProcessor.class
-edu\baker\finalproject\BigDecimalUtils.class
-edu\baker\finalproject\RPNCalculator.class
-edu\baker\finalproject\FinalProject.class
+edu/baker/finalproject/BigDecimalUtils.class
+edu/baker/finalproject/FinalProject.class
+edu/baker/finalproject/RPNEquationProcessor.class
+edu/baker/finalproject/RPNCalculator.class
