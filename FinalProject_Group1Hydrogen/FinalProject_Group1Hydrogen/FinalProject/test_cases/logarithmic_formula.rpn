@@ -1,71 +1,111 @@
 # Various power and logarithmic formula tests using ipow, pow, root, 
 # exp, log, exp10 and log10
 
-# Tests go here.
-# Test 1: log(a * b) = log(a) + log(b)
-10 
-100 
-exp 
-log  # Should be 100, log(10) = 1
-10 
-log  # log(10) = 1
-+  # 1 + 2 = 2, should be 2 - 2 = 0
+2
+7
+ipow
+128
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here
 
-# Test 2: log(a^b) = b * log(a)
-10 
-3 
-ipow 
-log  # log(10^3) = 3, should be 3
-3 
-10 
-log 
-*  # log(10) = 1, 3 * 1 = 3
--  # 3 - 3 = 0
+-2
+7
+ipow
+-128
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
 
-# Test 3: log(1) = 0
-1 
-log  
-# Should be 0
+1.5
+3.2
+pow
+3.660092227792233
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
 
-# Test 4: log(10) = 1
-10 
-log  
-# Should be 1
+2
+12
+root
+1.059463094359295
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
 
-# Test 5: exp(log(a)) = a
-10 
-log 
-exp  
-# Should be 10, should be 10 - 10 = 0
+1
+exp
+e
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
 
-# Test 6: a^(1/b) = root(a, b)
-27 
-3 
-root  # 3rd root of 27 = 3
-3 
-3 
-ipow  # Should be 27, 3^3 = 27
--  # 27 - 27 = 0
 
-# Test 7: exp(log10(10)) = 10
-10 
-log10 
-exp  
-# Should be 10, should be 10 - 10 = 0
+1
+exp10
+10
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
 
-# Test 8: log10(10^3) = 3
-10 
-3 
-ipow 
-log10  
-# Should be 3
+e
+log
+1
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
 
-# Test 9: exp10(log10(a)) = a
-10 
-log10 
-exp10  
-# Should be 10, should be 10 - 10 = 0
+10
+log10
+1
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
+# Should be zero or very small here so add to previous % error
++
 
+# Log(base 2) n = log n / log 2
+n = 256
+n
+log
+2
+log
+div
+8
+# Now compute the % error = abs(actual/expected - 1)
+div
+1
+-
+abs
 # Should be zero or very small here so add to previous % error
 +
 

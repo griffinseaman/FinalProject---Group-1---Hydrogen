@@ -1,99 +1,193 @@
-# Test misc. math functions swap, pop, abs, sign, recip, chs, min, max
-# floor, ceil, round, trunc, fact
+# Test misc. math functions
+a=10
+b=20
+c=1.5
 
-# Tests go here.
-# Start the stack with a few values
-# Push 5 and 3 onto the stack
-5
-3
+a
+b
+y
+a
+-
+# Should be 0 here
 
-# Swap the top two values
+# swap & pop
+a
+b
 swap
-# Stack is now: 3 5
-
-# Push a negative value and test abs, sign, chs
--7
+a
+-
 abs
-# Stack is now: 3 5 7 (abs converts -7 to 7)
-chs
-# Stack is now: 3 5 -7 (chs changes the sign)
-
-# Add 10 to the stack
-10
-
-# Stack is now: 3 5 -7 10
-
-# Test sign
-sign
-
-# Stack is now: 3 5 -7 1 (sign returns 1 if positive, -1 if negative, 0 if 0)
-
-# Add a -1 to the stack
--1
-
-# Stack is now: 3 5 -7 1 -1
-
-# Add
+swap
+pop
+# Should be 0 here so add to previous 0
 +
-# Stack is now: 3 5 -7 0
 
-
-# Push reciprocal
-2
-recip
-# Stack is now: 3 5 -7 0 0.5 (reciprocal of 2 is 0.5)
-
-# Test pop (removes top of stack)
-pop
-pop
-
-# Stack is now: 3 5 -7
-
-# Test min and max
-5
-9
+#min
+a
+b
 min
-# Stack is now: 3 5 -7 5 (min of 5 and 9 is 5)
-4
-8
+a
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+# max
+a
+b
 max
-# Stack is now: 3 5 -7 5 8 (max of 4 and 8 is 8)
+b
+-
+abs
+# Should be 0 here so add to previous 0
++
 
-# Test floor, ceil, round, trunc
-7.8
-floor
-# Stack is now: 3 5 -7 5 8 7 (floor of 7.8 is 7)
-6.1
-ceil
-# Stack is now: 3 5 -7 5 8 7 7 (ceil of 6.1 is 7)
-4.5
-round
-# Stack is now: 3 5 -7 5 8 7 7 4 (round 4.5 down to 4)
-5.9
-trunc
-# Stack is now: 3 5 -7 5 8 7 7 4 5 (truncates 5.9 to 5)
-
-# Test factorial
-3
-fact
-# Stack is now: 3 5 -7 5 8 7 7 4 5 6 (factorial of 3 is 6)
-
-# Should be zero or very small here so add to previous % error
-+
-+
-+
-+
-+
-+
-+
-+
-+
-# This should add all the numbers on the stack together
-# Value should be 44
-44
-# Integration test that runs this script will confirm that
-# the final result is zero or very small.
-div
+# sign & neg
+a
+sign
 1
 -
+abs
+# Should be 0 here so add to previous 0
++
+a
+neg
+sign
+-1
+-
+abs
+# Should be 0 here so add to previous 0
++
+0
+sign
+0
+-
+abs
+# Should be 0 here so add to previous 0
++
 
+# recip
+a
+recip
+0.1
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+# floor
+c
+floor
+1
+-
+abs
+# Should be 0 here so add to previous 0
++
+c
+neg
+floor
+-2
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+# ceil
+c
+ceil
+2
+-
+abs
+# Should be 0 here so add to previous 0
++
+c
+neg
+ceil
+-1
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+# round
+c
+round
+2
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+c
+neg
+round
+-2
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+# trunc
+c
+trunc
+1
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+c
+neg
+trunc
+-1
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+# factorial
+0
+!
+1
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+1
+!
+1
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+2
+!
+2
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+5
+!
+120
+-
+abs
+# Should be 0 here so add to previous 0
++
+
+90
+!
+// Compute percent error because result is large.
+1.4857159644817607e138
+-
+abs
+1.4857159644817607e138
+/
+# Should be 0 here so add to previous 0
++
+
+# Integration test that runs this script will confirm that
+# the final result is zero or very small.

@@ -3,27 +3,54 @@
 # Integration test that runs this script will have to search
 # the output to find the expected error messages.
 
+a = 10
+b = 20
+
 # This should generate a "Stack empty!" message.
 pop
 
-# Test other error situations here.
-....
-a + 1
-a = 1
-a = a
+# These should generate "Can't redefine xyz" messages
+π = 3
+pi = 3.14
+e = 2
 x = 1
-y = 1
-e = 1
-π = 1
-pi = 1
-z
-z = 123412341290341313248103274982137490128374091823749081273904128734098237490182374932174
+y = 2
+
+# This should generate "Illegal variable: bad_wolf"
+bad_wolf
+
+# This should generate "Illegal assignment: bad_wolf=dr. who?"
+bad_wolf=dr. who?
+
+# This should generate "ipow(0,0) is indeterminate!"
+0
+0
+ipow
+
+# This should generate "-Infinity"
+0
+log
+
+# This should generate "Infinity"
 1
 0
-div
-0
-0
-div
+/
+
+a
+b
+c = x
+d = y
 clear
-0.0
+c
+b
+-
+abs
+# Should be 0 here
+
+d
+a
+-
+abs
+# Should be 0 here so add to previous 0
++
 exit

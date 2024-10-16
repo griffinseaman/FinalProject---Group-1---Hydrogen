@@ -4,27 +4,21 @@ n = 6
 r = 3
 
 # Do your calculation with n and r here...
-....
-r
-2
-pow
 n
+r
+r
 mult
-# x = 54
-a = x
+mult
 pi
 n
-div
-b = x
+/
 sin
-c = x
-b
+mult
+pi
+n
+/
 cos
-c
 mult
-a
-mult
-
 
 # This is the expected result
 23.382685902179843
@@ -35,34 +29,27 @@ div
 -
 abs
 # Should be zero or very small here
-o = x
 
 # Do another computation here...
 # Approx pi with large number of sides
 n = 1000000
 r = 1
-n
 
 # Do your calculation again with n and r here...
-....
-r
-2
-pow
 n
+r
+r
 mult
-# x = 54
-a = x
+mult
 pi
 n
-div
-b = x
+/
 sin
-c = x
-b
-cos
-c
 mult
-a
+pi
+n
+/
+cos
 mult
 
 # This is the expected result
@@ -74,9 +61,7 @@ div
 -
 abs
 # Should be zero or very small here so add to previous % error
-o
 +
-
 
 # Integration test that runs this script will confirm that
 # the final result is zero or very small.

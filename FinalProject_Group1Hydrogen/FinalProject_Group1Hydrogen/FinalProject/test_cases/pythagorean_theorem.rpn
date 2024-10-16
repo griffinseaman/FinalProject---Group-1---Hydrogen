@@ -10,14 +10,10 @@ b
 mult
 add
 c
-x
+c
 mult
 
 # Now compute the % error = abs(actual/expected - 1)
-dup
-c
-2
-pow
 div
 1
 sub
