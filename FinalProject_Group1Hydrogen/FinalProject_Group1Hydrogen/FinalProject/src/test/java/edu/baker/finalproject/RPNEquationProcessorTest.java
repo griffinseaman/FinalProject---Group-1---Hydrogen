@@ -38,9 +38,9 @@ public class RPNEquationProcessorTest {
                 BigDecimal result = BigDecimal.ONE.negate();
                 try (BufferedReader reader = Files.newBufferedReader(p, StandardCharsets.UTF_8)) {
                     RPNEquationProcessor p1 = new RPNEquationProcessor(reader, MathContext.UNLIMITED);
-//                    OutputStreamWriter nullDevice = new OutputStreamWriter(OutputStream.nullOutputStream());
+                    OutputStreamWriter nullDevice = new OutputStreamWriter(OutputStream.nullOutputStream());
 // Output to System.out if needed for debugging.
-                    OutputStreamWriter nullDevice = new OutputStreamWriter(System.out);
+//                    OutputStreamWriter nullDevice = new OutputStreamWriter(System.out);
                     result = p1.processInput(nullDevice);
                     assertEquals(0., result.doubleValue(), 1e-9);
                 } catch (IOException ex) {
@@ -66,7 +66,6 @@ public class RPNEquationProcessorTest {
             fail("Can't open file " + path.toAbsolutePath());
         }
         String s = buffer.toString();
-        System.out.println(s);
         assertTrue(s.contains("Stack empty!"));
         assertTrue(s.contains("Can't redefine π"));
         assertTrue(s.contains("Can't redefine pi"));
