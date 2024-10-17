@@ -304,4 +304,65 @@ class BigDecimalUtilsTest {
         MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
         assertEquals(expected, BigDecimalUtils.acos(x, mc));
     }
+
+    Here are the test cases for sin, tan, asin, and atan in the BigDecimalUtilsTest.java file:
+/**
+    * Test for sin method in BigDecimalUtils.
+    * @author Yordanos Shiferaw
+    */
+    @Test
+    public void testSin() {
+        MathContext mc = MathContext.DECIMAL64;
+        //Call the BigDecimalUtils.sin method to compute sine
+        BigDecimal actual = BigDecimalUtils.sin(new BigDecimal("0.5235987755982989"), mc);
+        BigDecimal expected = new BigDecimal("0.5");
+        
+        //Compare the actual result with the expected result
+        assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
+    }
+    
+    /**
+    * Test for tan method in BigDecimalUtils.
+    * @author Yordanos Shiferaw
+    */
+    @Test
+    public void testTan() {
+        MathContext mc = MathContext.DECIMAL64;
+        //Call the BigDecimalUtils.cos method to compute cosine
+        BigDecimal actual = BigDecimalUtils.tan(new BigDecimal(Math.PI), mc);
+        BigDecimal expected = new BigDecimal("0");
+
+        //Compare the actual result with the expected result using a tolerance level
+        assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
+    }
+    
+    /**
+    * Test for asin method in BigDecimalUtils.
+    * @author Yordanos Shiferaw
+    */
+    @Test
+    public void testAsin() {
+        MathContext mc = MathContext.DECIMAL64;
+        //Call the BigDecimalUtils.cos method to compute cosine
+        BigDecimal actual = BigDecimalUtils.tan(new BigDecimal("0.5"), mc);
+        BigDecimal expected = new BigDecimal(Math.PI / 6);
+
+        //Compare the actual result with the expected result using a tolerance level
+        assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
+    }
+    
+    /**
+    * Test for atan method in BigDecimalUtils.
+    * @author Yordanos Shiferaw
+    */
+    @Test
+    public void testAtan() {
+        MathContext mc = MathContext.DECIMAL64;
+        //Call the BigDecimalUtils.cos method to compute cosine
+        BigDecimal actual = BigDecimalUtils.atan(new BigDecimal("1"), mc);
+        BigDecimal expected = new BigDecimal(Math.PI / 4);
+
+        //Compare the actual result with the expected result using a tolerance level
+        assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
+    }
 }
