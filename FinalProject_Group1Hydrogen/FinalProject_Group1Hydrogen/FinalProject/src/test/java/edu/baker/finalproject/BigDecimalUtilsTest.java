@@ -267,4 +267,41 @@ class BigDecimalUtilsTest {
         MathContext mc = new MathContext(6, RoundingMode.HALF_UP);
         assertEquals(expected, BigDecimalUtils.pow(base, power, mc));
     }
+    
+    /**
+     * Parameterized test for log10(BigDecimal x, MathContext mc).
+     *  
+     * @param x The test input
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "100, 2",
+        "10, 1",
+        "0.1, -1",
+        "0.01, -2",
+    })
+    public void testLog10(BigDecimal x, BigDecimal expected){
+        MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.log10(x, mc));
+    }
+    
+    /**
+     * Parameterized test for acos(BigDecimal x, MathContext mc).
+     *  
+     * @param x The test input
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "1, 0",
+        "-1, 3.1415926536",
+        "0.5, 1.047197551",
+    })
+    public void testAcos(BigDecimal x, BigDecimal expected){
+        MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.acos(x, mc));
+    }
 }

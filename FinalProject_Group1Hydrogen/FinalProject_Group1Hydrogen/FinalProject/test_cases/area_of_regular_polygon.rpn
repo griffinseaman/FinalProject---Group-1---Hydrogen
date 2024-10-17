@@ -61,7 +61,7 @@ div
 -
 abs
 # Should be zero or very small here so add to previous % error
-+
+-
 
 # Integration test that runs this script will confirm that
 # the final result is zero or very small.
