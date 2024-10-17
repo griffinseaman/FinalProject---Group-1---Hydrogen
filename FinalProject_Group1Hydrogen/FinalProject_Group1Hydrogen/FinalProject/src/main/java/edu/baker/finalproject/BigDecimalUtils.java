@@ -267,9 +267,19 @@ class BigDecimalUtils {
         return new BigDecimal(result, mc);
     }
 
-    static final BigDecimal acos(BigDecimal x, MathContext mc)
-    {
-        return BigDecimal.ZERO; // STUB ONLY
+    /**
+     
+    Computes the arccosine of a given angle in radians.
+    @param x The angle in radians as a BigDecimal.
+    @param mc The MathContext for precision control
+    @return The arccosine of the given angle as a BigDecimal
+    @author Yordanos Shiferaw*/
+    static final BigDecimal acos(BigDecimal x, MathContext mc){//Convert BigDecimal to double
+        double xDouble = x.doubleValue();
+        //Compute cosine using Math.exp
+        double result = Math.acos(xDouble);
+        //Convert result back to BigDecimal with specified precision
+        return new BigDecimal(result, mc);
     }
 
     /**
