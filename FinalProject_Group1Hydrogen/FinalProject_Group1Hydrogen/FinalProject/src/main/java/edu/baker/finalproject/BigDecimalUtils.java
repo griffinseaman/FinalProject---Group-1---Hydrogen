@@ -10,7 +10,7 @@ import java.math.RoundingMode;
 
 /**
  *
- * @author Noah Wood, ???
+ * @author Noah Wood, Griffin Seaman
  */
 class BigDecimalUtils {
     static final BigDecimal recip(BigDecimal x, MathContext mc) 
@@ -192,7 +192,7 @@ class BigDecimalUtils {
 
     static final BigDecimal log(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        return new BigDecimal(Math.log(x.doubleValue()), mc);
     }
 
     static final BigDecimal exp10(BigDecimal x, MathContext mc)
