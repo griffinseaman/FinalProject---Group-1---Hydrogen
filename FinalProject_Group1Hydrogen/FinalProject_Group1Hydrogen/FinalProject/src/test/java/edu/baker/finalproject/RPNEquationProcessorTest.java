@@ -7,6 +7,7 @@ import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.math.RoundingMode;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -37,7 +38,7 @@ public class RPNEquationProcessorTest {
                 System.out.println("Executing: " + p.toString());
                 BigDecimal result = BigDecimal.ONE.negate();
                 try (BufferedReader reader = Files.newBufferedReader(p, StandardCharsets.UTF_8)) {
-                    RPNEquationProcessor p1 = new RPNEquationProcessor(reader, MathContext.UNLIMITED);
+                    RPNEquationProcessor p1 = new RPNEquationProcessor(reader, new MathContext(10, RoundingMode.UNNECESSARY));
                     OutputStreamWriter nullDevice = new OutputStreamWriter(OutputStream.nullOutputStream());
 // Output to System.out if needed for debugging.
 //                    OutputStreamWriter nullDevice = new OutputStreamWriter(System.out);
