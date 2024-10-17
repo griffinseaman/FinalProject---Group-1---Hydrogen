@@ -285,6 +285,25 @@ class BigDecimalUtilsTest {
     public void testLog10(BigDecimal x, BigDecimal expected){
         MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
         assertEquals(expected, BigDecimalUtils.log10(x, mc));
+    }    
+    
+    /**
+     * Parameterized test for exp10(BigDecimal x, MathContext mc).
+     * 
+     * @param x The exponent
+     * @param expected The expected result to test against
+     * @author Noah Wood
+     */
+    @ParameterizedTest
+    @CsvSource({
+        "1, 10",
+        "2, 100",
+        "0, 1",
+        "0.1, 1.25892541"
+    })
+    public void testExp10(BigDecimal x, BigDecimal expected){
+        MathContext mc = new MathContext(9, RoundingMode.HALF_UP);
+        assertEquals(expected, BigDecimalUtils.exp10(x, mc));
     }
     
     /**
@@ -321,6 +340,21 @@ class BigDecimalUtilsTest {
     }
     
     /**
+    * Test for cos method in BigDecimalUtils.
+    * @author Yordanos Shiferaw
+    */
+    @Test
+    public void testCos() {
+        MathContext mc = MathContext.DECIMAL64;
+        //Call the BigDecimalUtils.cos method to compute sine
+        BigDecimal actual = BigDecimalUtils.cos(new BigDecimal(Math.PI / 3), mc);
+        BigDecimal expected = new BigDecimal("0.5");
+        
+        //Compare the actual result with the expected result
+        assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
+    }
+    
+    /**
     * Test for tan method in BigDecimalUtils.
     * @author Yordanos Shiferaw
     */
@@ -332,6 +366,22 @@ class BigDecimalUtilsTest {
         BigDecimal expected = new BigDecimal("0");
 
         //Compare the actual result with the expected result using a tolerance level
+        assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
+    }
+    
+    /**
+    * Test for log method in BigDecimalUtils.
+    */
+    @ParameterizedTest
+    @CsvSource({
+        "1, 0",
+        "2.71828182845, 1",
+        "0.3678794412, -1",
+        "7.3890560989, 2",
+    })
+    public void testLog(BigDecimal x, BigDecimal expected){
+        MathContext mc = new MathContext(2, RoundingMode.HALF_UP);
+        BigDecimal actual = BigDecimalUtils.log(x, mc);
         assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
     }
     
