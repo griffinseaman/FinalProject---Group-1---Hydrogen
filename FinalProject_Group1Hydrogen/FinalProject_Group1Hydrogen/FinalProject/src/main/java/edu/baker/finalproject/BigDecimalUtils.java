@@ -292,21 +292,47 @@ class BigDecimalUtils {
 
     static final BigDecimal atan2(BigDecimal y, BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert BigDecimal to double
+        double yDouble = y.doubleValue();
+        double xDouble = x.doubleValue();
+        
+        //compute atan2
+        double result = Math.atan2(yDouble, xDouble);
+        
+        //Convert back to BigDecimal
+        return new BigDecimal(result,mc);
     }
 
     static final BigDecimal e(MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert BigDecimal to double
+        double xDouble = BigDecimal.ONE.doubleValue();
+        
+        //Compute e^x using double arithmetic
+        double result = Math.exp(xDouble);
+        
+        //Convert result back to BigDecimal
+        return BigDecimal.valueOf(result).round(mc);
     }
 
     static final BigDecimal pi(MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert Math.Pi to BigDecimal
+        return new BigDecimal(Math.PI, mc);
     }
 
     static final BigDecimal factorial(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        //Convert to double
+        double xDouble = x.doubleValue();
+        
+        //Compute factorial
+        BigDecimal result = BigDecimal.ONE;
+        for (long i = 2; i <= xDouble; i++) {
+            result = result.multiply(BigDecimal.valueOf(i));
+        }
+        
+        //Return result
+        return result.round(mc);
     }
 }
