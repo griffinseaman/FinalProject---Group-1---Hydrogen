@@ -302,6 +302,8 @@ class BigDecimalUtils {
 
     static final BigDecimal atan2(BigDecimal y, BigDecimal x, MathContext mc)
     {
+        if(y.equals(x) && x.equals(BigDecimal.ZERO))
+            throw new ArithmeticException("atan2(0,0) undefined!");
         //Convert BigDecimal to double
         double yDouble = y.doubleValue();
         double xDouble = x.doubleValue();
@@ -333,6 +335,8 @@ class BigDecimalUtils {
 
     static final BigDecimal factorial(BigDecimal x, MathContext mc)
     {
+        if(x.signum()==-1 || x.doubleValue() != x.intValue())
+            throw new IllegalArgumentException("Factorial is not defined for negative or non-integer values.");
         //Convert to double
         double xDouble = x.doubleValue();
         

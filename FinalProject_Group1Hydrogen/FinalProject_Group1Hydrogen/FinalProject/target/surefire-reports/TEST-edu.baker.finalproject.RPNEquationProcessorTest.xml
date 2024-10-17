@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.RPNEquationProcessorTest" time="0.04" tests="2" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.RPNEquationProcessorTest" time="0.042" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
+    <property name="java.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
@@ -16,9 +16,9 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-amazon-corretto/lib"/>
-    <property name="sun.java.command" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016214919286_3.jar /home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire 2024-10-16T21-49-19_162-jvmRun1 surefire-20241016214919286_1tmp surefire_0-20241016214919286_2tmp"/>
+    <property name="sun.java.command" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016232647890_3.jar /home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire 2024-10-16T23-26-47_755-jvmRun1 surefire-20241016232647890_1tmp surefire_0-20241016232647890_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
+    <property name="surefire.test.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/noah"/>
     <property name="user.language" value="en"/>
@@ -26,13 +26,13 @@
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-amazon-corretto"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject"/>
+    <property name="basedir" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016214919286_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016232647890_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.24+8-LTS"/>
     <property name="user.name" value="noah"/>
@@ -48,7 +48,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="java.version" value="11.0.24"/>
-    <property name="user.dir" value="/home/noah/Desktop/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject"/>
+    <property name="user.dir" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -61,493 +61,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testProcessInput" classname="edu.baker.finalproject.RPNEquationProcessorTest" time="0.026">
-    <failure message="expected: &lt;0.0&gt; but was: &lt;126.0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0.0> but was: <126.0>
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:993)
-	at edu.baker.finalproject.RPNEquationProcessorTest.testProcessInput(RPNEquationProcessorTest.java:45)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
+  <testcase name="testProcessInput" classname="edu.baker.finalproject.RPNEquationProcessorTest" time="0.038">
     <system-out><![CDATA[Executing: test_cases/area_of_regular_polygon.rpn
-# Area of a regular polygon of n sides inscribed in a circle of radius r
-# n * r^2 * sin(π/n) * cos(π/n)
-n = 6
-r = 3
-
-# Do your calculation with n and r here...
-6
-3
-3
-9
-54
-0
-6
-0
-0
-0
-0
-6
-0
-0
-0
-
-# This is the expected result
-23.382685902179843
-
-# Now compute the % error = abs(actual/expected - 1)
-0E+15
-1
--1
-1
-# Should be zero or very small here
-
-# Do another computation here...
-# Approx pi with large number of sides
-n = 1000000
-r = 1
-
-# Do your calculation again with n and r here...
-1000000
-1
-1
-1
-1000000
-0
-1000000
-0
-0
-0
-0
-1000000
-0
-0
-0
-
-# This is the expected result
-3.141592653569122
-
-# Now compute the % error = abs(actual/expected - 1)
-0E+15
-1
--1
-1
-# Should be zero or very small here so add to previous % error
-0
-
-# Integration test that runs this script will confirm that
-# the final result is zero or very small.
 Executing: test_cases/compute_pi.rpn
-# Compute pi using Chudnovsky formula
-# https://en.wikipedia.org/wiki/Pi
-
-# term 0
-13591409
-
-# term 1
-k=1
-6
-1
-6
-0
-13591409
-545140134
-1
-545140134
-558731543
-0
-3
-1
-3
-0
-Illegal assignment: /
-1
-0
-3
-0
-Illegal assignment: /
--640320
-3
-1
-3
--262537412640768000
-Stack empty!
-Stack empty!
-
-# term 2
-k=2
-6
-2
-12
-0
-13591409
-545140134
-2
-1090280268
-1103871677
-0
-3
-2
-6
-0
-Illegal assignment: /
-2
-0
-3
-0
-Stack empty!
--640320
-3
-2
-6
-68925893036108889235415629824000000
-Stack empty!
-Stack empty!
-
-# Multiply the leading factor
-12
-Stack empty!
-640320
-1.5
-512384047.996000766754150390625
-Stack empty!
-# Then take the reciprocal
-Stack empty!
-
-# This is the expected result
-0
-
-# Now compute the % error = abs(actual/expected - 1)
-Stack empty!
-1
-Stack empty!
-Stack empty!
-# Should be zero or very small here
-
-# Integration test that runs this script will confirm that
-# the final result is zero or very small.
 Executing: test_cases/misc_functions.rpn
-# Test misc. math functions
-a=10
-b=20
-c=1.5
-
-10
-20
-10
-10
-0
-# Should be 0 here
-
-# swap & pop
-10
-20
-10
-10
-0
-0
-20
-0
-# Should be 0 here so add to previous 0
-0
-
-#min
-10
-20
-10
-10
-0
-0
-# Should be 0 here so add to previous 0
-0
-
-# max
-10
-20
-20
-20
-0
-0
-# Should be 0 here so add to previous 0
-0
-
-# sign & neg
-10
-1
-1
-0
-0
-# Should be 0 here so add to previous 0
-0
-10
--10
--1
--1
-0
-0
-# Should be 0 here so add to previous 0
-0
-0
-0
-0
-0
-0
-# Should be 0 here so add to previous 0
-0
-
-# recip
-10
-0.1
-0.1
-0.0
-0.0
-# Should be 0 here so add to previous 0
-0.0
-
-# floor
-1.5
-1
-1
-0
-0
-# Should be 0 here so add to previous 0
-0.0
-1.5
--1.5
--2
--2
-0
-0
-# Should be 0 here so add to previous 0
-0.0
-
-# ceil
-1.5
-2
-2
-0
-0
-# Should be 0 here so add to previous 0
-0.0
-1.5
--1.5
--1
--1
-0
-0
-# Should be 0 here so add to previous 0
-0.0
-
-# round
-1.5
-2
-2
-0
-0
-# Should be 0 here so add to previous 0
-0.0
-
-1.5
--1.5
--1
--2
-1
-1
-# Should be 0 here so add to previous 0
-1.0
-
-# trunc
-1.5
-1
-1
-0
-0
-# Should be 0 here so add to previous 0
-1.0
-
-1.5
--1.5
--1
--1
-0
-0
-# Should be 0 here so add to previous 0
-1.0
-
-# factorial
-0
-0
-1
--1
-1
-# Should be 0 here so add to previous 0
-2.0
-
-1
-0
-1
--1
-1
-# Should be 0 here so add to previous 0
-3.0
-
-2
-0
-2
--2
-2
-# Should be 0 here so add to previous 0
-5.0
-
-5
-0
-120
--120
-120
-# Should be 0 here so add to previous 0
-125.0
-
-90
-0
-Undefined variable: // Compute percent error because result is large.
-1.4857159644817607E+138
--1485715964481760700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-1485715964481760700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-1.4857159644817607E+138
-1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-# Should be 0 here so add to previous 0
-126.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-
-# Integration test that runs this script will confirm that
-# the final result is zero or very small.
+Executing: test_cases/circle_diameter.rpn
+Executing: test_cases/golden_ratio.rpn
+Executing: test_cases/pythagorean_theorem.rpn
+Executing: test_cases/logarithmic_formula.rpn
+Executing: test_cases/trig_formula.rpn
 ]]></system-out>
   </testcase>
-  <testcase name="testProcessBadInput" classname="edu.baker.finalproject.RPNEquationProcessorTest" time="0.012">
+  <testcase name="testProcessBadInput" classname="edu.baker.finalproject.RPNEquationProcessorTest" time="0.003">
     <system-out><![CDATA[Executing with capture: test_cases/error_cases.rpn
-# Error cases tested here.
-
-# Integration test that runs this script will have to search
-# the output to find the expected error messages.
-
-a = 10
-b = 20
-
-# This should generate a "Stack empty!" message.
-Stack empty!
-
-# These should generate "Can't redefine xyz" messages
-Can't redefine π
-Can't redefine pi
-Can't redefine e
-Can't redefine x
-Can't redefine y
-
-# This should generate "Illegal variable: bad_wolf"
-Undefined variable: bad_wolf
-
-# This should generate "Illegal assignment: bad_wolf=dr. who?"
-Illegal assignment: bad_wolf=dr. who?
-
-# This should generate "ipow(0,0) is indeterminate!"
-0
-0
-IllegalArgumentException: ipow(0,0) is indeterminate!
-
-# This should generate "-Infinity"
-0
-0
-
-# This should generate "Infinity"
-1
-0
-Illegal assignment: /
-
-10
-20
-c=20
-d=10
-Clear
-20
-20
-0
-0
-# Should be 0 here
-
-10
-10
-0
-0
-# Should be 0 here so add to previous 0
-0
-
 ]]></system-out>
   </testcase>
 </testsuite>
