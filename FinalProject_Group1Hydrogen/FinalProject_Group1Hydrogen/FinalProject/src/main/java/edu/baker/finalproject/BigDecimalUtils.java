@@ -15,61 +15,32 @@ import java.math.RoundingMode;
 class BigDecimalUtils {
     static final BigDecimal recip(BigDecimal x, MathContext mc) 
     {
-        // Convert the BigDecimal to double
-        double xDouble = x.doubleValue();
-
-        // Perform the reciprocal operation (1 / x)
-        double resultDouble = 1.0 / xDouble;
-
-        // Convert the result back to BigDecimal with the specified MathContext
-        return new BigDecimal(resultDouble, mc);
+        // Return the reciprocal of x (1 / x) using BigDecimal arithmetic
+        return BigDecimal.ONE.divide(x, mc);
     }
 
     static final BigDecimal floor(BigDecimal x, MathContext mc) 
     {
-        // Convert BigDecimal to double
-        double xDouble = x.doubleValue();
-        
-        // Use Math.floor to compute the floor value of the double
-        double result = Math.floor(xDouble);
-        
-        // Convert result back to BigDecimal with specified precision
-        return new BigDecimal(result, mc);
+        // Use BigDecimal setScale to perform floor operation with RoundingMode.FLOOR
+        return x.setScale(0, RoundingMode.FLOOR);
     }
 
     static final BigDecimal ceil(BigDecimal x, MathContext mc) 
     {
-        // Convert BigDecimal to double
-        double xDouble = x.doubleValue();
-        
-        // Use Math.ceil to compute the ceiling value of the double
-        double result = Math.ceil(xDouble);
-        
-        // Convert result back to BigDecimal with specified precision
-        return new BigDecimal(result, mc);
+        // Use BigDecimal setScale to perform ceiling operation with RoundingMode.CEILING
+        return x.setScale(0, RoundingMode.CEILING);
     }
 
-    static final BigDecimal round(BigDecimal x, MathContext mc) {
-        // Convert BigDecimal to double
-        double xDouble = x.doubleValue();
-
-        // Round the double value using Math.round and convert back to BigDecimal
-        BigDecimal result = new BigDecimal(Math.round(xDouble), mc);
-
-        // Return the result with the specified precision
-        return result.setScale(mc.getPrecision(), mc.getRoundingMode());
+    static final BigDecimal round(BigDecimal x, MathContext mc) 
+    {
+        // Round the BigDecimal with the provided MathContext
+        return x.round(mc);
     }
 
     static final BigDecimal trunc(BigDecimal x, MathContext mc) 
     {
-        // Convert BigDecimal to double
-        double xDouble = x.doubleValue();
-
-        // Use Math.floor for positive numbers and Math.ceil for negative numbers
-        double result = xDouble >= 0 ? Math.floor(xDouble) : Math.ceil(xDouble);
-
-        // Convert result back to BigDecimal with specified precision
-        return new BigDecimal(result, mc);
+        // Truncate the BigDecimal by setting the scale to 0 and using RoundingMode.DOWN
+        return x.setScale(0, RoundingMode.DOWN);
     }
 
     /**
