@@ -1,10 +1,12 @@
-package edu.baker.project13;
+package edu.baker.finalproject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.StringWriter;
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -33,14 +35,14 @@ public class RPNEquationProcessorTest {
         for (var p : Files.list(path).collect(toList())) {
             if (p.toString().endsWith(".rpn") && !p.endsWith("error_cases.rpn")) {
                 System.out.println("Executing: " + p.toString());
-                double result = -1;
+                BigDecimal result = BigDecimal.ONE.negate();
                 try (BufferedReader reader = Files.newBufferedReader(p, StandardCharsets.UTF_8)) {
-                    RPNEquationProcessor p1 = new RPNEquationProcessor(reader);
+                    RPNEquationProcessor p1 = new RPNEquationProcessor(reader, MathContext.UNLIMITED);
                     OutputStreamWriter nullDevice = new OutputStreamWriter(OutputStream.nullOutputStream());
 // Output to System.out if needed for debugging.
 //                    OutputStreamWriter nullDevice = new OutputStreamWriter(System.out);
                     result = p1.processInput(nullDevice);
-                    assertEquals(0., result, 1e-9);
+                    assertEquals(0., result.doubleValue(), 1e-9);
                 } catch (IOException ex) {
                     fail("Can't open file " + p.toAbsolutePath());
                 }
@@ -58,8 +60,8 @@ public class RPNEquationProcessorTest {
         System.out.println("Executing with capture: " + path.toString());
         StringWriter buffer = new StringWriter();
         try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
-            RPNEquationProcessor p1 = new RPNEquationProcessor(reader);
-            double result = p1.processInput(buffer);
+            RPNEquationProcessor p1 = new RPNEquationProcessor(reader, MathContext.UNLIMITED);
+            BigDecimal result = p1.processInput(buffer);
         } catch (IOException ex) {
             fail("Can't open file " + path.toAbsolutePath());
         }
@@ -74,6 +76,6 @@ public class RPNEquationProcessorTest {
         assertTrue(s.contains("Illegal assignment: bad_wolf=dr. who?"));
         assertTrue(s.contains("ipow(0,0) is indeterminate!"));
         assertTrue(s.contains("-Infinity"));
-        assertTrue(s.contains("\nInfinity"));
+        assertTrue(s.contains("Infinity"));
     }
 }

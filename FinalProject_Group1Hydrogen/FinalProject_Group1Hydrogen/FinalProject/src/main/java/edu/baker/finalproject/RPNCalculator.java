@@ -89,6 +89,10 @@ public class RPNCalculator {
     public void div() {
         BigDecimal x = stack.pop();
         BigDecimal y = stack.pop();
+        if(x.equals(BigDecimal.ZERO)){
+            value(new BigDecimal(Double.POSITIVE_INFINITY));
+            return;
+        }
         value(y.divide(x, mc));
     }
 
