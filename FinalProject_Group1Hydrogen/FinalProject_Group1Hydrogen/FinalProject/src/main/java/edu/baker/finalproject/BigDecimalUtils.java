@@ -197,17 +197,17 @@ class BigDecimalUtils {
 
     static final BigDecimal exp10(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        return pow(BigDecimal.TEN, x, mc);
     }
 
     static final BigDecimal log10(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        return new BigDecimal(Math.log10(x.doubleValue()), mc);
     }
 
     static final BigDecimal cos(BigDecimal x, MathContext mc)
     {
-        return BigDecimal.ZERO; // STUB ONLY
+        return new BigDecimal(Math.cos(x.doubleValue()), mc);
     }
 
     /**
