@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.BigDecimalUtilsTest" time="0.482" tests="107" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.BigDecimalUtilsTest" time="0.389" tests="107" errors="0" skipped="0" failures="4">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-amazon-corretto/lib"/>
-    <property name="sun.java.command" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016233901172_3.jar /home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire 2024-10-16T23-39-01_033-jvmRun1 surefire-20241016233901172_1tmp surefire_0-20241016233901172_2tmp"/>
+    <property name="sun.java.command" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241018125415568_3.jar /home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire 2024-10-18T12-54-15_425-jvmRun1 surefire-20241018125415568_1tmp surefire_0-20241018125415568_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241016233901172_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241018125415568_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.24+8-LTS"/>
     <property name="user.name" value="noah"/>
@@ -61,110 +61,614 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testAtan2_QuadrantIII" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.036"/>
+  <testcase name="testAtan2_QuadrantIII" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.032"/>
   <testcase name="testExpZero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testFactorial_LargeInteger" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAtan2_QuadrantII" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testAtan2_QuadrantII" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testAtan2_QuadrantIV" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCos" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testLog(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.037"/>
-  <testcase name="testLog(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testLog(BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testCos" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testLog(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.021"/>
+  <testcase name="testLog(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testLog(BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testLog(BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.005"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testSin" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testTan" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testSin" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testTan" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testExpLargePositive" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testExp10(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExp10(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testExp10(BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testExp10(BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testFloor(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.015"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowLong(BigDecimal, long, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpLargePositive" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExp10(BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExp10(BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testExp10(BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExp10(BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testFloor(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.011"/>
   <testcase name="testFloor(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testFloor(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testFloor(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testLog10(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testLog10(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testLog10(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testLog10(BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testLog10(BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testRecip" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testRound(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testRound(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testRound(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testRound(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testTrunc(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testLog10(BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testRecip" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testRound(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003">
+    <failure message="round(-2.5) should be -3.0 ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: round(-2.5) should be -3.0 ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:193)
+	at edu.baker.finalproject.BigDecimalUtilsTest.testRound(BigDecimalUtilsTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:92)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:198)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:106)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:106)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="testRound(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001">
+    <failure message="round(2.5) should be 3.0 ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: round(2.5) should be 3.0 ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:193)
+	at edu.baker.finalproject.BigDecimalUtilsTest.testRound(BigDecimalUtilsTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:92)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:198)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:106)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:106)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="testRound(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001">
+    <failure message="round(-1.5) should be -2.0 ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: round(-1.5) should be -2.0 ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:193)
+	at edu.baker.finalproject.BigDecimalUtilsTest.testRound(BigDecimalUtilsTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:92)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:198)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:106)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:106)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="testRound(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001">
+    <failure message="round(1.5) should be 2.0 ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: round(1.5) should be 2.0 ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:193)
+	at edu.baker.finalproject.BigDecimalUtilsTest.testRound(BigDecimalUtilsTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:92)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:205)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:201)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:71)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:198)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:106)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:106)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="testTrunc(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTrunc(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testTrunc(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testTrunc(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testTrunc(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testTrunc(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, BigDecimal)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpLargeNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testAcos(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAcos(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testAcos(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testAcos(BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testAsin" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testAtan" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCeil(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCeil(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCeil(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testCeil(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testCeil(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testCeil(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testCeil(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testE_HighPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPi" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPi" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testFactorial_Zero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testAtan2_QuadrantI" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAtan2_PositiveAndNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testAtan2_PositiveAndNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testFactorial_PositiveInteger" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, BigDecimal)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testFactorial_NonInteger" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testPi_HigherPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testExpPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testPi_HigherPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, BigDecimal)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testExpVariousInputs(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExpVariousInputs(String, String)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpVariousInputs(String, String)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testExpOne" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testAtan2_OnAxis" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testFactorial_Negative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>

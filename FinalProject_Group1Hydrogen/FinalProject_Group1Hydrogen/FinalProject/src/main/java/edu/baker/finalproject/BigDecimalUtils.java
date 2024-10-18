@@ -54,7 +54,32 @@ class BigDecimalUtils {
      */
      static final BigDecimal ipow(BigDecimal base, BigDecimal power, MathContext mc)
     {
-        return new BigDecimal(Math.pow(base.doubleValue(), power.round(mc).intValue()), mc);
+        if(power.equals(BigDecimal.ZERO) || power.intValue() == 0){
+            return BigDecimal.ONE;
+        }
+        if(base.equals(BigDecimal.ZERO)){
+            return BigDecimal.ZERO;
+        }
+        
+        // Use a higher precision than is called for
+        MathContext ic = new MathContext(mc.getPrecision() * 2, mc.getRoundingMode());
+        long exp = power.longValue();
+        boolean negPow = exp < 0;
+        exp = Math.abs(exp);
+        BigDecimal result = BigDecimal.ONE;
+        BigDecimal currentBase = base;
+        
+        while(exp > 0){
+            if((exp & 1) == 1){  // if the exponent is odd
+                result = result.multiply(currentBase, ic);
+            }
+            currentBase = currentBase.multiply(currentBase,  ic); // Square the current base
+            exp >>=1; // Divide exponent by 2
+        }
+        if(negPow){
+            result = BigDecimal.ONE.divide(result, mc);
+        }
+        return result.round(mc);
     }
 
 
@@ -69,7 +94,33 @@ class BigDecimalUtils {
      */
     static final BigDecimal ipow(BigDecimal base, long ipower, MathContext mc)
     {
-        return new BigDecimal(Math.pow(base.doubleValue(), (int)ipower), mc);
+        if(ipower == 0){
+            return BigDecimal.ONE;
+        }
+        if(base.equals(BigDecimal.ZERO)){
+            return BigDecimal.ZERO;
+        }
+        
+        // Use a higher precision than is called for
+        MathContext ic = new MathContext(mc.getPrecision() * 2, mc.getRoundingMode());
+        long exp = ipower;
+        boolean negPow = exp < 0;
+        exp = Math.abs(exp);
+        BigDecimal result = BigDecimal.ONE;
+        BigDecimal currentBase = base;
+        
+        while(exp > 0){
+            if((exp & 1) == 1){  // if the exponent is odd
+                result = result.multiply(currentBase, ic);
+            }
+            currentBase = currentBase.multiply(currentBase,  ic); // Square the current base
+            exp >>=1; // Divide exponent by 2
+        }
+        if(negPow){
+            result = BigDecimal.ONE.divide(result, mc);
+        }
+        return result.round(mc);
+//        return new BigDecimal(Math.pow(base.doubleValue(), (int)ipower), mc);
     }
 
 
@@ -138,7 +189,20 @@ class BigDecimalUtils {
      */
     static final BigDecimal pow(BigDecimal base, BigDecimal power, MathContext mc)
     {
-        return new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()), mc);
+        if(power.equals(BigDecimal.ZERO)){
+            return BigDecimal.ONE;
+        }
+        if(base.equals(BigDecimal.ZERO)){
+            return BigDecimal.ZERO;
+        }
+        
+        // Log exponentiation
+        BigDecimal logBase = log(base.abs(), mc);
+        BigDecimal expRes = logBase.multiply(power, mc);
+        BigDecimal result = exp(expRes, mc);
+        if(base.signum() == -1 && !power.remainder(new BigDecimal(2)).equals(BigDecimal.ZERO))
+            return result.round(mc).negate();
+        return result.round(mc);
     }
 
     /**
