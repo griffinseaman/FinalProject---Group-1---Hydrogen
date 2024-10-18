@@ -34,7 +34,7 @@ class BigDecimalUtils {
     static final BigDecimal round(BigDecimal x, MathContext mc) 
     {
         // Round the BigDecimal with the provided MathContext
-        return x.round(mc);
+        return x.round(mc).setScale(mc.getPrecision(), mc.getRoundingMode());
     }
 
     static final BigDecimal trunc(BigDecimal x, MathContext mc) 
@@ -55,10 +55,10 @@ class BigDecimalUtils {
      static final BigDecimal ipow(BigDecimal base, BigDecimal power, MathContext mc)
     {
         if(power.equals(BigDecimal.ZERO) || power.intValue() == 0){
-            return BigDecimal.ONE;
+            return BigDecimal.ONE.setScale(mc.getPrecision());
         }
         if(base.equals(BigDecimal.ZERO)){
-            return BigDecimal.ZERO;
+            return BigDecimal.ZERO.setScale(mc.getPrecision());
         }
         
         // Use a higher precision than is called for
@@ -79,7 +79,7 @@ class BigDecimalUtils {
         if(negPow){
             result = BigDecimal.ONE.divide(result, mc);
         }
-        return result.round(mc);
+        return result.round(mc).setScale(mc.getPrecision());
     }
 
 
@@ -95,10 +95,10 @@ class BigDecimalUtils {
     static final BigDecimal ipow(BigDecimal base, long ipower, MathContext mc)
     {
         if(ipower == 0){
-            return BigDecimal.ONE;
+            return BigDecimal.ONE.setScale(mc.getPrecision());
         }
         if(base.equals(BigDecimal.ZERO)){
-            return BigDecimal.ZERO;
+            return BigDecimal.ZERO.setScale(mc.getPrecision());
         }
         
         // Use a higher precision than is called for
@@ -119,7 +119,7 @@ class BigDecimalUtils {
         if(negPow){
             result = BigDecimal.ONE.divide(result, mc);
         }
-        return result.round(mc);
+        return result.round(mc).setScale(mc.getPrecision());
 //        return new BigDecimal(Math.pow(base.doubleValue(), (int)ipower), mc);
     }
 
@@ -135,20 +135,13 @@ class BigDecimalUtils {
      */
     static final BigDecimal iroot(BigDecimal base, BigDecimal root, MathContext mc)
     {
+        if(base.equals(BigDecimal.ZERO))
+            return BigDecimal.ZERO.setScale(mc.getPrecision());
         if(root.equals(BigDecimal.ONE))
-            return base;
+            return base.setScale(mc.getPrecision());
         if(root.equals(BigDecimal.ZERO))
-            return BigDecimal.ONE;
-        Double x = base.abs().doubleValue();
-        Double y = 1 / (double)root.round(mc).intValue();
-        // Handle negative values
-        BigDecimal out = new BigDecimal(Math.pow(x,y),mc);
-        if(base.signum() < 0){
-            if(y%2!=0){
-                out = out.negate(mc);
-            }
-        }
-        return out;
+            return BigDecimal.ONE.setScale(mc.getPrecision());
+        return pow(base, BigDecimal.ONE.divide(root, mc), mc).setScale(mc.getPrecision());
     }
 
     /**
@@ -162,20 +155,13 @@ class BigDecimalUtils {
      */
     static final BigDecimal iroot(BigDecimal base, long iroot, MathContext mc)
     {
+        if(base.equals(BigDecimal.ZERO))
+            return BigDecimal.ZERO.setScale(mc.getPrecision());
         if(iroot == 1)
-            return base;
+            return base.setScale(mc.getPrecision());
         if(iroot == 0)
-            return BigDecimal.ONE;
-        Double x = base.abs().doubleValue();
-        Double y = 1 / (double)iroot;
-        // Handle negative values
-        BigDecimal out = new BigDecimal(Math.pow(x,y),mc);
-        if(base.signum() < 0){
-            if(y%2!=0){
-                out = out.negate(mc);
-            }
-        }
-        return out;
+            return BigDecimal.ONE.setScale(mc.getPrecision());
+        return pow(base, BigDecimal.ONE.divide(new BigDecimal(iroot, mc), mc), mc).setScale(mc.getPrecision());
     }
 
     /**
@@ -201,8 +187,8 @@ class BigDecimalUtils {
         BigDecimal expRes = logBase.multiply(power, mc);
         BigDecimal result = exp(expRes, mc);
         if(base.signum() == -1 && !power.remainder(new BigDecimal(2)).equals(BigDecimal.ZERO))
-            return result.round(mc).negate();
-        return result.round(mc);
+            return result.round(mc).negate().setScale(mc.getPrecision());
+        return result.round(mc).setScale(mc.getPrecision());
     }
 
     /**

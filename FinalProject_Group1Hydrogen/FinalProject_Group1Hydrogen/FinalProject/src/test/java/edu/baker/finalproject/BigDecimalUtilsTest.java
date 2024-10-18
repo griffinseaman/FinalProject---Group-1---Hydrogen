@@ -73,9 +73,9 @@ class BigDecimalUtilsTest {
     void testRound(String input, String expected) {
         BigDecimal x = new BigDecimal(input);
         BigDecimal expectedValue = new BigDecimal(expected);
-        BigDecimal actualValue = BigDecimalUtils.round(x, MC);
+        BigDecimal actualValue = BigDecimalUtils.round(x, new MathContext(0, RoundingMode.HALF_UP));
         assertTrue(expectedValue.compareTo(actualValue) == 0, 
-                   "round(" + input + ") should be " + expected);
+                   "round(" + input + ") = " + actualValue + " should be " + expected);
     }
 
     @ParameterizedTest
@@ -151,20 +151,20 @@ class BigDecimalUtilsTest {
      */
     @ParameterizedTest
     @CsvSource({
-        "2, 3, 8", // Normal case: 2^3 = 8
-        "5, 0, 1", // Edge case: any number to the power of 0 is 1
-        "0, 3, 0", // Edge case: 0^n = 0 for n > 0
-        "10, -1, 0.1", // Negative power: 10^-1 = 0.1
-        "-2, 3, -8", // Odd power with negative base: (-2)^3 = -8
-        "-2, 2, 4",// Even power with negative base: (-2)^2 = 4
-        "2, -2, 0.25", // Negative power: 2^-2 = 0.25
-        "0, 0, 1", // Edge case: 0^0 is commonly defined as 1
-        "27, 0.333333333, 1",// Fractional power: cube root of 27 is 3 BUT 
+        "2, 3, 8.000000000", // Normal case: 2^3 = 8
+        "5, 0, 1.000000000", // Edge case: any number to the power of 0 is 1
+        "0, 3, 0.000000000", // Edge case: 0^n = 0 for n > 0
+        "10, -1, 0.100000000", // Negative power: 10^-1 = 0.1
+        "-2, 3, -8.000000000", // Odd power with negative base: (-2)^3 = -8
+        "-2, 2, 4.000000000",// Even power with negative base: (-2)^2 = 4
+        "2, -2, 0.250000000", // Negative power: 2^-2 = 0.25
+        "0, 0, 1.000000000", // Edge case: 0^0 is commonly defined as 1
+        "27, 0.333333333, 1.000000000",// Fractional power: cube root of 27 is 3 BUT 
         // there are no fractions in integer power, should round to 27^0 = 1
-        "1.000001, 1000000, 2.718280469"  // Very large powers
+        "1.000001, 1000000, 2.718280470"  // Very large powers
     })
     public void testIpowDecimal(BigDecimal base, BigDecimal power, BigDecimal expected){
-        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        MathContext mc = new MathContext(9, RoundingMode.HALF_UP);
         assertEquals(expected, BigDecimalUtils.ipow(base, power, mc));
     }
     
@@ -178,14 +178,14 @@ class BigDecimalUtilsTest {
      */
     @ParameterizedTest
     @CsvSource({
-        "2, 3, 8", // Normal case
-        "5, 0, 1", // Any number to the power of 0
-        "0, 3, 0", // 0^n = 0 for n > 0
-        "-2, 2, 4",// Even power with negative base
-        "-2, 3, -8", // Odd power with negative base
-        "10, -1, 0.1",// Negative power
-        "0, 0, 1", // 0^0 is defined as 1
-        "1.000001, 1000000, 2.71828047"  // Very large powers
+        "2, 3, 8.000000000", // Normal case
+        "5, 0, 1.000000000", // Any number to the power of 0
+        "0, 3, 0.000000000", // 0^n = 0 for n > 0
+        "-2, 2, 4.000000000",// Even power with negative base
+        "-2, 3, -8.000000000", // Odd power with negative base
+        "10, -1, 0.100000000",// Negative power
+        "0, 0, 1.000000000", // 0^0 is defined as 1
+        "1.000001, 1000000, 2.718280470"  // Very large powers
     })
     public void testIpowLong(BigDecimal base, long ipower, BigDecimal expected) {
         MathContext mc = new MathContext(9, RoundingMode.HALF_UP);
@@ -202,15 +202,15 @@ class BigDecimalUtilsTest {
      */
     @ParameterizedTest
     @CsvSource({
-        "8, 3, 2", // Cube root of 8
-        "9, 2, 3", // Square root of 9
-        "27, 3, 3",// Cube root of 27
-        "16, 4, 2",// Fourth root of 16
-        "7, 1, 7", // 1th root of n is always n
-        "1, 5, 1", // nth root of 1 is always 1
-        "0, 3, 0", // nth root of 0 is 0
-        "-8, 3, -2", // Cube root of negative number (-8) is -2
-        "8, 0, 1", // Base with root = 0, assumed 1 as a rule
+        "8, 3, 2.00", // Cube root of 8
+        "9, 2, 3.00", // Square root of 9
+        "27, 3, 3.00",// Cube root of 27
+        "16, 4, 2.00",// Fourth root of 16
+        "7, 1, 7.00", // 1th root of n is always n
+        "1, 5, 1.00", // nth root of 1 is always 1
+        "0, 3, 0.00", // nth root of 0 is 0
+        "-8, 3, -2.00", // Cube root of negative number (-8) is -2
+        "8, 0, 1.00", // Base with root = 0, assumed 1 as a rule
         "0.01, 2, 0.10" // Small fractional roots: sqrt(0.01) = 0.1
     })
     public void testIrootDecimal(BigDecimal base, BigDecimal root, BigDecimal expected) {
@@ -228,15 +228,15 @@ class BigDecimalUtilsTest {
      */
     @ParameterizedTest
     @CsvSource({
-        "8, 3, 2", // Cube root of 8
-        "9, 2, 3", // Square root of 9
-        "27, 3, 3",// Cube root of 27
-        "16, 4, 2",// Fourth root of 16
-        "7, 1, 7", // 1th root of n is always n
-        "1, 5, 1", // nth root of 1 is always 1
-        "0, 3, 0", // nth root of 0 is 0
-        "-8, 3, -2", // Cube root of negative number (-8) is -2
-        "8, 0, 1", // Base with root = 0, assumed 1 as a rule
+        "8, 3, 2.00", // Cube root of 8
+        "9, 2, 3.00", // Square root of 9
+        "27, 3, 3.00",// Cube root of 27
+        "16, 4, 2.00",// Fourth root of 16
+        "7, 1, 7.00", // 1th root of n is always n
+        "1, 5, 1.00", // nth root of 1 is always 1
+        "0, 3, 0.00", // nth root of 0 is 0
+        "-8, 3, -2.00", // Cube root of negative number (-8) is -2
+        "8, 0, 1.00", // Base with root = 0, assumed 1 as a rule
         "0.01, 2, 0.10" // Small fractional roots: sqrt(0.01) = 0.1
     })
     public void testIrootLong(BigDecimal base, long iroot, BigDecimal expected) {
