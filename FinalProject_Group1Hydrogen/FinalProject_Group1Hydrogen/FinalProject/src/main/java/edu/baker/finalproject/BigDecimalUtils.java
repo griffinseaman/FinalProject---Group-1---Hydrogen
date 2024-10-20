@@ -338,14 +338,7 @@ class BigDecimalUtils {
 
     static final BigDecimal e(MathContext mc)
     {
-        //Convert BigDecimal to double
-        double xDouble = BigDecimal.ONE.doubleValue();
-        
-        //Compute e^x using double arithmetic
-        double result = Math.exp(xDouble);
-        
-        //Convert result back to BigDecimal
-        return BigDecimal.valueOf(result).round(mc);
+        return exp(BigDecimal.ONE, mc);
     }
 
     static final BigDecimal pi(MathContext mc)
