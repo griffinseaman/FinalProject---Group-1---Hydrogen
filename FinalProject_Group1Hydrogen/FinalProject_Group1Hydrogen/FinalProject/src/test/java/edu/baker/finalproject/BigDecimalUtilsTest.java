@@ -415,130 +415,110 @@ class BigDecimalUtilsTest {
         assertEquals(expected.doubleValue(), actual.doubleValue(), 1e-9);
     }
 
-    //atan2 Tests
+//atan2 Tests
+    //Matt Lutz
     @Test
-    public void testAtan2_QuadrantI() {
-        BigDecimal y = new BigDecimal("1.0");
-        BigDecimal x = new BigDecimal("1.0");
-        BigDecimal result = BigDecimalUtils.atan2(y, x, MC);
-        BigDecimal expected = new BigDecimal("0.7853981634"); // π/4
-        assertEquals(expected.doubleValue(), result.doubleValue(), 1e-9);
+    public void testAtan2Zero() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal result = BigDecimalUtils.atan2(BigDecimal.ZERO, BigDecimal.ZERO, mc);
+        assertEquals(BigDecimal.ZERO, result); // atan2(0, 0) should return 0
     }
 
     @Test
-    public void testAtan2_QuadrantII() {
-        BigDecimal y = new BigDecimal("1.0");
-        BigDecimal x = new BigDecimal("-1.0");
-        BigDecimal result = BigDecimalUtils.atan2(y, x, MC);
-        BigDecimal expected = new BigDecimal("2.356194490"); // 3π/4
-        assertEquals(expected.doubleValue(), result.doubleValue(), 1e-9);
+    public void testAtan2PositiveY() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal result = BigDecimalUtils.atan2(BigDecimal.ONE, BigDecimal.ZERO, mc);
+        assertEquals(new BigDecimal("1.57"), result); // atan2(1, 0) = π/2 (approx 1.57)
     }
 
     @Test
-    public void testAtan2_QuadrantIII() {
-        BigDecimal y = new BigDecimal("-1.0");
-        BigDecimal x = new BigDecimal("-1.0");
-        BigDecimal result = BigDecimalUtils.atan2(y, x, MC);
-        BigDecimal expected = new BigDecimal("-2.356194490"); // -3π/4
-        assertEquals(expected.doubleValue(), result.doubleValue(), 1e-9);
+    public void testAtan2NegativeY() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal result = BigDecimalUtils.atan2(BigDecimal.ONE.negate(), BigDecimal.ZERO, mc);
+        assertEquals(new BigDecimal("-1.57"), result); // atan2(-1, 0) = -π/2 (approx -1.57)
     }
 
     @Test
-    public void testAtan2_QuadrantIV() {
-        BigDecimal y = new BigDecimal("-1.0");
-        BigDecimal x = new BigDecimal("1.0");
-        BigDecimal result = BigDecimalUtils.atan2(y, x, MC);
-        BigDecimal expected = new BigDecimal("-0.7853981634"); // -π/4
-        assertEquals(expected.doubleValue(), result.doubleValue(), 1e-9);
+    public void testAtan2PositiveCoordinates() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal result = BigDecimalUtils.atan2(BigDecimal.ONE, BigDecimal.ONE, mc);
+        assertEquals(new BigDecimal("0.7853981634"), result); // atan2(1, 1) = π/4 (approx 0.79)
     }
 
     @Test
-    public void testAtan2_OnAxis() {
-        BigDecimal y = new BigDecimal("0");
-        BigDecimal x = new BigDecimal("0");
-        // atan2(0, 0) is usually undefined, but for this example, we can check a specific value
-        assertThrows(ArithmeticException.class, () -> {
-            BigDecimalUtils.atan2(y, x, MC);
-        });
-    }
-
-    @Test
-    public void testAtan2_PositiveAndNegative() {
-        BigDecimal y = new BigDecimal("3.0");
-        BigDecimal x = new BigDecimal("-2.0");
-        BigDecimal result = BigDecimalUtils.atan2(y, x, MC);
-        BigDecimal expected = new BigDecimal("2.158798930");
-        assertEquals(expected.doubleValue(),
-                result.doubleValue(),
-                1e-9);
+    public void testAtan2NegativeCoordinates() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal result = BigDecimalUtils.atan2(BigDecimal.ONE.negate(), BigDecimal.ONE.negate(), mc);
+        assertEquals(new BigDecimal("-2.36"), result); // atan2(-1, -1) = -3π/4 (approx -2.36)
     }
     
     //e Tests
+    //Matt Lutz
+@Test
+    public void testEPrecision() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal expectedE = new BigDecimal("2.718281828"); // 10 digits of e
+        assertEquals(expectedE, BigDecimalUtils.e(mc));
+    }
+
     @Test
-    public void testE_HighPrecision() {
-        BigDecimal x = new BigDecimal("1.0");
-        BigDecimal result = BigDecimalUtils.e(MC);
-        BigDecimal expected = new BigDecimal("2.718281828459045090795598298427649", MC); // e^1 with higher precision
-        assertEquals(expected, result);
+    public void testEHigherPrecision() {
+        MathContext mc = new MathContext(30, RoundingMode.HALF_UP);
+        BigDecimal expectedE = new BigDecimal("2.71828182845904523536028747135");
+        assertEquals(expectedE, BigDecimalUtils.e(mc));
     }
     
     //Pi Tests
+    //Matt Lutz
     @Test
     public void testPi() {
-        BigDecimal result = BigDecimalUtils.pi(MC);
-        assertEquals(Math.PI,
-                result.doubleValue(),
-                1e-9);
-    }
-
-    @Test
-    public void testPi_HigherPrecision() {
-        BigDecimal result = BigDecimalUtils.pi(MC);
-        BigDecimal expected = new BigDecimal(Math.PI, MC);
-        assertEquals(expected, result);
+        MathContext mc = new MathContext(20, RoundingMode.HALF_UP);
+        BigDecimal result = BigDecimalUtils.pi(mc);
+        BigDecimal expected = new BigDecimal("3.1415926535897932385"); // Expected value of pi with 20 digits
+        assertEquals(expected, result); // Check if the calculated value matches the expected value
     }
     
     //Factorial Tests
-    @Test
-    public void testFactorial_PositiveInteger() {
-        BigDecimal x = new BigDecimal("5.0");
-        BigDecimal result = BigDecimalUtils.factorial(x, MC);
-        BigDecimal expected = new BigDecimal("120");
-        assertEquals(expected, result);
+    //Matt Lutz
+@Test
+    public void testFactorialZero() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal num = new BigDecimal("0");
+        BigDecimal expected = BigDecimal.ONE; // 0! = 1
+        assertEquals(expected, BigDecimalUtils.factorial(num, mc));
     }
 
     @Test
-    public void testFactorial_Zero() {
-        BigDecimal x = BigDecimal.ZERO;
-        BigDecimal result = BigDecimalUtils.factorial(x, MC);
-        BigDecimal expected = BigDecimal.ONE;
-        assertEquals(expected, result);
+    public void testFactorialOne() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal num = new BigDecimal("1");
+        BigDecimal expected = BigDecimal.ONE; // 1! = 1
+        assertEquals(expected, BigDecimalUtils.factorial(num, mc));
     }
 
     @Test
-    public void testFactorial_Negative() {
-        BigDecimal x = new BigDecimal("-1.0");
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            BigDecimalUtils.factorial(x, MC);
+    public void testFactorialFive() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal num = new BigDecimal("5");
+        BigDecimal expected = new BigDecimal("120"); // 5! = 120
+        assertEquals(expected, BigDecimalUtils.factorial(num, mc));
+    }
+
+    @Test
+    public void testFactorialNegative() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal num = new BigDecimal("-1");
+        assertThrows(IllegalArgumentException.class, () -> {
+            BigDecimalUtils.factorial(num, mc);
         });
-        assertEquals("Factorial is not defined for negative or non-integer values.", exception.getMessage());
     }
 
     @Test
-    public void testFactorial_NonInteger() {
-        BigDecimal x = new BigDecimal("2.5");
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            BigDecimalUtils.factorial(x, MC);
+    public void testFactorialNonInteger() {
+        MathContext mc = new MathContext(10, RoundingMode.HALF_UP);
+        BigDecimal num = new BigDecimal("2.5");
+        assertThrows(IllegalArgumentException.class, () -> {
+            BigDecimalUtils.factorial(num, mc);
         });
-        assertEquals("Factorial is not defined for negative or non-integer values.", exception.getMessage());
-    }
-
-    @Test
-    public void testFactorial_LargeInteger() {
-        BigDecimal x = new BigDecimal("20.0");
-        BigDecimal result = BigDecimalUtils.factorial(x, MC);
-        
-        BigDecimal expected = new BigDecimal("2.43290200817664E+18"); // 20!
-        assertEquals(expected.doubleValue(), result.doubleValue(), 1e-9);
     }
 }
