@@ -270,23 +270,23 @@ class BigDecimalUtils {
         return new BigDecimal(result, mc);
     }
     
-    /**
-     * Computes the arcsine of a given angle in radians.
-     * 
-     * @param x The angle in radians as a BigDecimal.
-     * @param mc The MathContext for precision control
-     * @return The arcsine of the given angle as a BigDecimal
-     * @author Yordanos Shiferaw
-     */
-    static final BigDecimal asin(BigDecimal x, MathContext mc)
-    {
-        //Convert BigDecimal to double
-        double xDouble = x.doubleValue();  
-        //Compute cosine using Math.exp
-        double result = Math.asin(xDouble);
-        //Convert result back to BigDecimal with specified precision
-        return new BigDecimal(result, mc);
+   /**
+ * Computes the arccosine of a given value using BigDecimal arithmetic.
+ * 
+ * @param x The value as a BigDecimal, must be in the range [-1, 1].
+ * @param mc The MathContext for precision control
+ * @return The arccosine of the given value in radians as a BigDecimal
+ * @author Abul Shordar
+ */
+    
+static final BigDecimal acos(BigDecimal x, MathContext mc) {
+    if (x.abs().compareTo(BigDecimal.ONE) > 0) {
+        throw new ArithmeticException("Domain error: acos(x) is only defined for -1 <= x <= 1");
     }
+    
+    BigDecimal halfPi = pi(mc).divide(new BigDecimal("2"), mc);
+    return halfPi.subtract(asin(x, mc), mc);
+}
 
     /**
      
