@@ -348,46 +348,91 @@ static final BigDecimal acos(BigDecimal x, MathContext mc) {
         return new BigDecimal(result, mc);
     }
 
-    static final BigDecimal atan2(BigDecimal y, BigDecimal x, MathContext mc)
-    {
-        if(y.equals(x) && x.equals(BigDecimal.ZERO))
-            throw new ArithmeticException("atan2(0,0) undefined!");
-        //Convert BigDecimal to double
-        double yDouble = y.doubleValue();
-        double xDouble = x.doubleValue();
+    static final BigDecimal atan2(BigDecimal y, BigDecimal x, MathContext mc) {
+    BigDecimal PI = new BigDecimal("3.14");
+    BigDecimal HALF_PI = PI.divide(BigDecimal.valueOf(2), MathContext.DECIMAL128);
         
-        //compute atan2
-        double result = Math.atan2(yDouble, xDouble);
-        
-        //Convert back to BigDecimal
-        return new BigDecimal(result,mc);
+    // Check if x is zero
+        if (x.compareTo(BigDecimal.ZERO) == 0) {
+            // Return π/2 if y > 0, otherwise -π/2
+            return (y.compareTo(BigDecimal.ZERO) > 0) ? HALF_PI : (y.compareTo(BigDecimal.ZERO) < 0) ? HALF_PI.negate() : BigDecimal.ZERO;
+        }
+
+        // Calculate y / x
+        BigDecimal quotient = y.divide(x, mc);
+
+        // Calculate atan(y / x)
+        BigDecimal atanValue = atan(quotient, mc);
+
+        // Adjust the result based on the sign of x
+        if (x.compareTo(BigDecimal.ZERO) < 0) {
+            atanValue = atanValue.add(PI);
+        }
+
+        return atanValue.round(mc);
     }
 
-    static final BigDecimal e(MathContext mc)
-    {
-        return exp(BigDecimal.ONE, mc);
+    static final BigDecimal e(MathContext mc) {
+        BigDecimal sum = BigDecimal.ZERO;
+        BigDecimal factorial = BigDecimal.ONE;
+
+        // Set a limit for the series to achieve a desired precision
+        int limit = mc.getPrecision() + 5; // Additional terms for accuracy
+
+        for (int n = 0; n < limit; n++) {
+            if (n > 0) {
+                factorial = factorial.multiply(BigDecimal.valueOf(n)); // n!
+            }
+            sum = sum.add(BigDecimal.ONE.divide(factorial, mc)); // 1/n!
+        }
+
+        return sum.round(mc);
     }
 
-    static final BigDecimal pi(MathContext mc)
-    {
-        //Convert Math.Pi to BigDecimal
-        return new BigDecimal(Math.PI, mc);
+    static final BigDecimal pi(MathContext mc) {
+        // Precompute constant C
+        BigDecimal C = new BigDecimal("426880").multiply(BigDecimal.valueOf(Math.sqrt(10005))); 
+        BigDecimal M = BigDecimal.ONE; // M_k
+        BigDecimal L = new BigDecimal(13591409); // L_k
+        BigDecimal X = BigDecimal.ONE; // X_k
+        BigDecimal K = BigDecimal.valueOf(6); // K = 6
+        BigDecimal S = L; // Sum S initialized to L_0
+
+        // Loop for terms in the series
+        for (int k = 1; k <= mc.getPrecision() + 5; k++) {
+            M = M.multiply(K.multiply(K.add(BigDecimal.ONE)).multiply(K.add(BigDecimal.valueOf(2))))
+                   .divide(BigDecimal.valueOf(k * k * k), mc); // M_k
+
+            L = L.add(new BigDecimal(545140134)); // L_k
+            X = X.multiply(BigDecimal.valueOf(-262537412640768000L)); // X_k
+
+            // Update sum S
+            S = S.add(M.multiply(L).divide(X, mc)); // S += M_k * L_k / X_k
+            
+            K = K.add(BigDecimal.valueOf(12)); // Increment K
+        }
+
+        // Calculate π
+        BigDecimal piValue = C.divide(S, mc);
+        return piValue.setScale(mc.getPrecision(), RoundingMode.HALF_UP);
     }
 
-    static final BigDecimal factorial(BigDecimal x, MathContext mc)
-    {
-        if(x.signum()==-1 || x.doubleValue() != x.intValue())
-            throw new IllegalArgumentException("Factorial is not defined for negative or non-integer values.");
-        //Convert to double
-        double xDouble = x.doubleValue();
-        
-        //Compute factorial
-        BigDecimal result = BigDecimal.ONE;
-        for (long i = 2; i <= xDouble; i++) {
-            result = result.multiply(BigDecimal.valueOf(i));
+    static final BigDecimal factorial(BigDecimal x, MathContext mc) {
+         // Check if x is a non-negative integer
+        if (x.compareTo(BigDecimal.ZERO) < 0 || x.scale() > 0) {
+            throw new IllegalArgumentException("Factorial is defined for non-negative integers only.");
         }
         
-        //Return result
-        return result.round(mc);
+        if (x.compareTo(BigDecimal.ZERO) == 0) {
+            return BigDecimal.ONE; // 0! = 1
+        }
+
+        BigDecimal result = BigDecimal.ONE;
+
+        // Calculate factorial iteratively
+        for (BigDecimal i = BigDecimal.ONE; i.compareTo(x) <= 0; i = i.add(BigDecimal.ONE)) {
+            result = result.multiply(i, mc);
+        }
+
+        return result;
     }
-}
