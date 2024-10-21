@@ -299,6 +299,7 @@ class BigDecimalUtilsTest {
      * @param x The exponent
      * @param expected The expected result to test against
      * @author Noah Wood
+     * @editor Yordanos Shiferaw
      */
     @ParameterizedTest
     @CsvSource({
@@ -308,7 +309,10 @@ class BigDecimalUtilsTest {
         "0.1, 1.25892541"
     })
     public void testExp10(BigDecimal x, double expected){
-        assertTrue(Math.abs(expected - BigDecimalUtils.exp10(x, MC).doubleValue()) <= 1e9);
+        MathContext mc = new MathContext(9, RoundingMode.HALF_UP);
+        BigDecimal actual = BigDecimalUtils.exp10(x, mc);
+        //Strip trailing zeros from both actual and expected values
+        assertEquals(expected.stripTrailingZeros(), actual.stripTrailingZeros());
     }
     
     /**
