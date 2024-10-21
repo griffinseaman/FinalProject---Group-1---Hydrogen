@@ -197,18 +197,25 @@ class BigDecimalUtils {
      * @param x The exponent
      * @param mc The MathContext for precision control
      * @return e^x as a BigDecimal
-     * @author Noah Wood // Uh.... I don't actually remember doing this?
+     * @author Yordanos Shiferaw
      */
     static final BigDecimal exp(BigDecimal x, MathContext mc)
     {
-        // Convert BigDecimal to double
-        double xDouble = x.doubleValue();
-        
-        // Compute e^x using Math.exp
-        double result = Math.exp(xDouble);
-        
-        // Convert result back to BigDecimal with specified precision
-        return new BigDecimal(result, mc);
+        BigDecimal result = BigDecimal.ONE;
+        BigDecimal term = BigDecimal.ONE;
+        BigDecimal n = BigDecimal.ONE;
+
+        //Use a higher precision for intermediate calculations
+        MathContext mc2 = new MathContext(mc.getPrecision() + 10);
+
+        for (int i = 1; i < mc.getPrecision() * 10; i++) {
+            term = term.multiply(x, mc2).divide(n, mc2);
+            result = result.add(term, mc2);
+            n = n.add(BigDecimal.ONE);
+        }
+
+        //Round the final result to the desired precision
+        return result.round(mc);
     }
 
     static final BigDecimal log(BigDecimal x, MathContext mc)
@@ -216,14 +223,34 @@ class BigDecimalUtils {
         return new BigDecimal(Math.log(x.doubleValue()), mc);
     }
 
+    /**
+     * Computes 10^x.
+     * 
+     * @param x The exponent
+     * @param mc The MathContext for precision control
+     * @return The value of 10^x with the specified precision.
+     * @author Yordanos Shiferaw
+     */
     static final BigDecimal exp10(BigDecimal x, MathContext mc)
     {
-        return pow(BigDecimal.TEN, x, mc);
+        MathContext mc2 = new MathContext(mc.getPrecision() + 10);
+        BigDecimal result = pow(BigDecimal.TEN, x, mc2);
+        return result.round(mc);
     }
 
+    /**
+     * Computes the base-10 logarithm (log10) of a BigDecimal value.
+     * 
+     * @param x The exponent
+     * @param mc The MathContext for precision control
+     * @return The base-10 logarithm of the input BigDecimal with the specified precision.
+     * @author Yordanos Shiferaw
+     */
     static final BigDecimal log10(BigDecimal x, MathContext mc)
     {
-        return new BigDecimal(Math.log10(x.doubleValue()), mc);
+        MathContext mc2 = new MathContext(mc.getPrecision() + 10);
+        BigDecimal result = log(x,mc2).divide(log(BigDecimal.TEN, mc2));
+        return result.round(mc);
     }
 
     static final BigDecimal cos(BigDecimal x, MathContext mc)
