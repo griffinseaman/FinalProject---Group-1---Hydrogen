@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.BigDecimalUtilsTest" time="0.397" tests="107" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.baker.finalproject.BigDecimalUtilsTest" time="0.449" tests="106" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-amazon-corretto/lib"/>
-    <property name="sun.java.command" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241020170831775_3.jar /home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire 2024-10-20T17-08-31_643-jvmRun1 surefire-20241020170831775_1tmp surefire_0-20241020170831775_2tmp"/>
+    <property name="sun.java.command" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241020235533620_3.jar /home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire 2024-10-20T23-55-33_494-jvmRun1 surefire-20241020235533620_1tmp surefire_0-20241020235533620_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/test-classes:/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/classes:/home/noah/.m2/repository/org/hamcrest/hamcrest/3.0/hamcrest-3.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar:/home/noah/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/noah/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar:/home/noah/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar:/home/noah/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-api/1.9.0/jqwik-api-1.9.0.jar:/home/noah/.m2/repository/net/jqwik/jqwik-engine/1.9.0/jqwik-engine-1.9.0.jar:/home/noah/.m2/repository/org/mockito/mockito-core/5.13.0/mockito-core-5.13.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy/1.15.0/byte-buddy-1.15.0.jar:/home/noah/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.0/byte-buddy-agent-1.15.0.jar:/home/noah/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/noah/.m2/repository/org/mockito/mockito-junit-jupiter/5.13.0/mockito-junit-jupiter-5.13.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241020170831775_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/noah/Desktop/School/FinalProject/FinalProject_Group1Hydrogen/FinalProject_Group1Hydrogen/FinalProject/target/surefire/surefirebooter-20241020235533620_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.24+8-LTS"/>
     <property name="user.name" value="noah"/>
@@ -61,114 +61,110 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testAtan2_QuadrantIII" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.029"/>
-  <testcase name="testExpZero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testFactorial_LargeInteger" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAtan2_QuadrantII" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAtan2_QuadrantIV" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testCos" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testLog(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.02"/>
+  <testcase name="testFactorialFive" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.027"/>
+  <testcase name="testFactorialZero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpZero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testCos" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testLog(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.024"/>
   <testcase name="testLog(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testLog(BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testLog(BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.004"/>
   <testcase name="testPow(BigDecimal, BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPow(BigDecimal, BigDecimal, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testSin" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.004"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003"/>
+  <testcase name="testPow(BigDecimal, BigDecimal, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testSin" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTan" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowLong(BigDecimal, long, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowLong(BigDecimal, long, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowLong(BigDecimal, long, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowLong(BigDecimal, long, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowLong(BigDecimal, long, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowLong(BigDecimal, long, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowLong(BigDecimal, long, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowLong(BigDecimal, long, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowLong(BigDecimal, long, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testIpowLong(BigDecimal, long, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowLong(BigDecimal, long, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExpLargePositive" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002">
-    <system-out><![CDATA[26.88117141816135609425340043596290E+42
-]]></system-out>
-  </testcase>
+  <testcase name="testExpLargePositive" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.006"/>
+  <testcase name="testFactorialOne" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testExp10(BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExp10(BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExp10(BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testExp10(BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExp10(BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testFloor(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.01"/>
-  <testcase name="testFloor(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testExp10(BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testFloor(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.011"/>
+  <testcase name="testFloor(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testFloor(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testFloor(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testLog10(BigDecimal, BigDecimal)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testLog10(BigDecimal, BigDecimal)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testLog10(BigDecimal, BigDecimal)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testLog10(BigDecimal, BigDecimal)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testLog10(BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testLog10(BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testLog10(BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testLog10(BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testRecip" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testRound(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.012"/>
+  <testcase name="testRound(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.013"/>
   <testcase name="testRound(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testRound(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testRound(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testRound(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTrunc(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testTrunc(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testTrunc(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTrunc(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testTrunc(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExpLargeNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAcos(BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAcos(BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAcos(BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAsin" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootDecimal(BigDecimal, BigDecimal, double)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testExpLargeNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testFactorialNonInteger" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003"/>
+  <testcase name="testAcos(BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.005"/>
+  <testcase name="testAcos(BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003"/>
+  <testcase name="testAcos(BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.004"/>
+  <testcase name="testAsin" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testAtan" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testCeil(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testCeil(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testCeil(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testCeil(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testE_HighPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testPi" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testFactorial_Zero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testAtan2_QuadrantI" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testAtan2_PositiveAndNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testFactorial_PositiveInteger" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testPi" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.003"/>
+  <testcase name="testAtan2PositiveY" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootLong(BigDecimal, long, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIrootLong(BigDecimal, long, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testIrootLong(BigDecimal, long, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootLong(BigDecimal, long, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIrootLong(BigDecimal, long, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
+  <testcase name="testIrootLong(BigDecimal, long, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIrootLong(BigDecimal, long, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, double)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIrootLong(BigDecimal, long, double)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testFactorial_NonInteger" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
-  <testcase name="testPi_HigherPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testExpPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testAtan2NegativeCoordinates" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testAtan2NegativeY" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testAtan2PositiveCoordinates" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[6]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[7]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[8]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
   <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[9]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExpVariousInputs(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testIpowDecimal(BigDecimal, BigDecimal, double)[10]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testAtan2Zero" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpVariousInputs(String, String)[1]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.002"/>
   <testcase name="testExpVariousInputs(String, String)[2]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[3]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
   <testcase name="testExpVariousInputs(String, String)[4]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testExpVariousInputs(String, String)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testExpOne" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
-  <testcase name="testAtan2_OnAxis" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
-  <testcase name="testFactorial_Negative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpVariousInputs(String, String)[5]" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testExpOne" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.001"/>
+  <testcase name="testEPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testEHigherPrecision" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
+  <testcase name="testFactorialNegative" classname="edu.baker.finalproject.BigDecimalUtilsTest" time="0.0"/>
 </testsuite>
